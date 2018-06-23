@@ -1,0 +1,16 @@
+[21-Feb-2014 07:35:46] PHP Fatal error:  Uncaught exception 'phpmailerException' with message 'SMTP Error: Could not authenticate.' in /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php:1314
+Stack trace:
+#0 /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php(1179): PHPMailer->smtpConnect()
+#1 /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php(1023): PHPMailer->smtpSend('Date: Fri, 21 F...', '--b1_53ef5985c9...')
+#2 /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php(930): PHPMailer->postSend()
+#3 /home/cyfideqg/public_html/prajwalan.org/pages/etc/getrequest.php(105): PHPMailer->send()
+#4 {main}
+  thrown in /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php on line 1314
+[21-Feb-2014 07:35:48] PHP Fatal error:  Uncaught exception 'phpmailerException' with message 'SMTP Error: Could not authenticate.' in /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php:1314
+Stack trace:
+#0 /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php(1179): PHPMailer->smtpConnect()
+#1 /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php(1023): PHPMailer->smtpSend('Date: Fri, 21 F...', '--b1_1e599f5dfb...')
+#2 /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php(930): PHPMailer->postSend()
+#3 /home/cyfideqg/public_html/prajwalan.org/pages/etc/getrequest.php(105): PHPMailer->send()
+#4 {main}
+  thrown in /home/cyfideqg/public_html/prajwalan.org/pages/etc/class.phpmailer.php on line 1314

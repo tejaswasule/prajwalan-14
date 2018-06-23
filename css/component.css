@@ -1,0 +1,206 @@
+
+
+.stage {
+	list-style: none;
+	padding: 0;
+}
+
+/*************************************
+Build the scene and rotate on hover
+**************************************/
+
+.scene {
+	width: 180px;
+	height: 300px;
+	margin: 50px 35px;
+	float: left;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+	cursor:ponter;
+}
+
+.movie {
+	width: 180px;
+	height: 225px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(-120px);
+	-moz-transform: translateZ(-120px);
+	transform: translateZ(-120px);
+	-webkit-transition: -webkit-transform 350ms;
+	-moz-transition: -moz-transform 350ms;
+	transition: transform 350ms;
+	cursor:ponter;
+	
+}
+
+.movie:hover {
+	-webkit-transform: rotateY(-78deg) translateZ(20px);
+	-moz-transform: rotateY(-78deg) translateZ(20px);
+	transform: rotateY(-78deg) translateZ(20px);
+}
+
+/*************************************
+Transform and style the two planes
+**************************************/
+
+.movie .poster
+{
+	position: absolute;
+	width: 180px;
+	height: 225px;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	overflow:hidden;
+	border:1px solid white;
+	}
+.movie .info {
+	position: absolute;
+	background:url(../img/bg.png);
+	
+	width: 180px;
+	height: 225px;
+	overflow:hidden;
+	border:1px solid white;
+	}
+#event_info
+{
+color:white;
+font-size:20px;
+text-align:center;
+text-shadow:none;
+text-shadow:1px 2px 3px black;
+padding:20px;
+}	
+#info_name
+{
+	text-align:center;
+	color:white;
+	font-size:30px;
+	letter-spacing:2px;
+	margin:0px;
+	padding:0px;
+	border-bottom:1px solid white;
+	text-shadow:1px 2px 3px black;
+	}
+
+
+.movie .poster  {
+	-webkit-transform: translateZ(130px);
+	-moz-transform: translateZ(130px);
+	transform: translateZ(130px);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.movie .info {
+	-webkit-transform: rotateY(80deg) translateZ(130px);
+	-moz-transform: rotateY(80deg) translateZ(130px);
+	transform: rotateY(80deg) translateZ(130px);
+	font-size: 0.75em;
+	margin-left:-4px;
+}
+
+/*************************************
+Shadow beneath the 3D object
+**************************************/
+
+.csstransforms3d .movie::after {
+	content: '';
+	width: 200px;
+	height: 260px;
+	position: absolute;
+	bottom: 10px;
+	left:-10px;
+	box-shadow: 0 30px 50px rgba(0,0,0,0.3);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	-webkit-transform: rotateX(80deg) translateY(130px);
+	-moz-transform: rotateX(80deg) translateY(130px);
+	transform: rotateX(80deg) translateY(130px);
+	-webkit-transition: box-shadow 350ms;
+	-moz-transition: box-shadow 350ms;
+	transition: box-shadow 350ms;
+}
+
+.csstransforms3d .movie:hover::after {
+	box-shadow: 20px -5px 50px rgba(0,0,0,0.3);
+}
+
+/*************************************
+Movie information
+**************************************/
+
+.info header {
+	color: #000;
+	padding: 7px 10px;
+	font-weight: bold;
+	height: 195px;
+	text-shadow: 0px 1px 1px rgba(0,0,0,1);
+}
+
+.info header h1 {
+	margin: 0 0 2px;
+	font-size: 1.4em;
+}
+
+.info header .rating {
+	border: 1px solid #FFF;
+	padding: 0px 3px;
+}
+
+.info p {
+	padding: 1.2em 1.4em;
+	margin: 2px 0 0;
+	font-weight: 700;
+	color: #666;
+	line-height: 1.4em;
+	border-top: 10px solid #555;
+}
+
+/*************************************
+Generate "lighting" using box shadows
+**************************************/
+
+
+
+/*************************************
+Posters and still images
+**************************************/
+
+.scene:nth-child(1) .movie .poster {
+  background-image: url(../img/poster01.png);
+}
+
+.scene:nth-child(2) .poster {
+  background-image: url(../img/poster02.png);
+}
+
+.scene:nth-child(3) .poster {
+  background-image: url(../img/poster03.png);
+}
+.scene:nth-child(4) .poster {
+  background-image: url(../img/poster04.png);
+}
+
+/*************************************
+Fallback
+**************************************/
+.no-csstransforms3d .movie .poster, 
+.no-csstransforms3d .movie .info {
+	position: relative;
+}
+
+/*************************************
+Media Queries
+**************************************/
+@media screen and (max-width: 60.75em){
+	.scene {
+		float: none;
+		margin: 30px auto 60px;
+	}
+}

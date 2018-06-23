@@ -1,0 +1,160 @@
+
+#menubar
+{
+width:1000px;
+height:30px;
+margin-left:auto;
+margin-right:auto;
+}
+
+#menubar #top {
+	color:white;
+	float:right;
+	height:30px;
+	line-height:30px;
+	width:100%;
+}
+#menubar nav#topmenu {
+	margin:0 0;
+	padding:0 0;
+	position:relative;
+	width:600px;
+	float:right;
+	margin-top:-14px;
+}
+#menubar nav#topmenu ul {
+	margin:0;
+	padding:0;
+}
+
+
+#menubar nav#topmenu ul li {
+	
+	
+	float:right;
+	position:relative;
+	font-size:17px;
+	font-weight: 400;
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:auto;
+	margin-right:30px;
+	height:30px;
+	text-align:left;
+	text-transform:uppercase;
+	cursor:pointer;
+}
+#menubar nav#topmenu ul li ul.sublist {
+	
+	background:url(../img/1.png);
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:0px;
+	top:33px;
+	opacity:0;
+	visibility:hidden;
+	-moz-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+	-webkit-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+	-o-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+}
+#menubar nav#topmenu ul li ul.sublist li 
+{
+	border:none;
+	clear:both;
+	margin-top:-15px;
+	padding:0;
+	padding-left:5px;
+	width:130px;
+	-moz-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+	-webkit-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+	-o-transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+	transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+}
+
+#menubar nav#topmenu ul li:hover ul.sublist {
+			
+	opacity:1;
+	visibility:visible;
+}
+#menubar nav#topmenu ul li:hover ul.sublist li {
+	margin-top:0;
+	opacity:1;
+}/* SUB SUB LIST */
+#menubar nav#topmenu ul li ul.sublist li ul.subsublist {
+	background:url(../img/2.png);
+	
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	opacity:0;
+	visibility:hidden;
+	-moz-transition:opacity 0.2s 0.01s ease-in-out, left 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+	-webkit-transition:opacity 0.2s 0.01s ease-in-out, left 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+	-o-transition:opacity 0.2s 0.01s ease-in-out, left 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+	transition:opacity 0.2s 0.01s ease-in-out, left 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+}
+#menubar nav#topmenu ul li ul.sublist li ul.subsublist li{
+	border:none;
+	clear:both;
+	left:50px;
+	width:200px;
+	opacity:1;
+}
+#menubar nav#topmenu ul li ul.sublist li:hover ul.subsublist {
+	opacity:1;
+	left:163px;
+	visibility:visible;
+}
+
+
+		
+#navtop li {
+	z-index:1000;
+	position: relative;
+	display: inline-block;
+	outline: none;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	
+	}
+
+
+.main-navigation li
+{
+	
+	
+}.main-navigation li::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	max-width: 0;
+border-top: 1px solid white;
+	color: white;
+	content: attr(data-hover);
+	-webkit-transition: max-width 0.8s;
+	-moz-transition: max-width 0.8s;
+	transition: max-width 0.8s;
+}
+
+.main-navigation li:hover::before,
+.main-navigation li:focus::before {
+	max-width: 100%;
+	cursor:pointer;
+	height:80%;
+	border-bottom:1px solid white;
+	
+}

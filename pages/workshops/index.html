@@ -1,0 +1,158 @@
+ <div id="sponsercontainer">
+		<div class="title-2">WORKSHOPS</div><hr/>
+			<div id="sponserbox">
+				<div id="eventbox" >
+				<table >
+				<br/>
+				<tr >
+					<td>
+					
+						<div class="android" id="container_events">
+							
+							<div id="eventimg">
+								<img width="200px" height="150px"src="img/workshops/android.jpg">
+							</div>
+						
+							<div id="span" class="ani">
+								POWER ANDROID<br/>
+
+							</div>
+							
+						</div>	
+					</td>
+					
+					<td>
+					
+						<div class="linux" id="container_events">
+							
+							<div id="eventimg">
+								<img width="200px" height="150px"src="img/workshops/linux.jpg">
+							</div>
+						
+							<div id="span" class="ani">
+								UNDERSTANDING LINUX<br/>
+
+							</div>
+							
+						</div>	
+					</td>
+					<td>
+						<div class="autobotics" id="container_events">
+							
+							<div id="eventimg">
+								<img width="200px" height="150px"src="img/workshops/autobotics.jpg">
+							</div>
+						
+							<div id="span" class="ani">
+								AutoBOTICS<br/>
+
+							</div>
+							
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					
+						<div class="matlab" id="container_events">
+							
+							<div id="eventimg">
+								<img width="200px" height="150px"src="img/workshops/matlab.jpg">
+							</div>
+						
+							<div id="span" class="ani">
+								MATLAB & IMAGE PROCCESING<br/>
+
+							</div>
+							
+						</div>	
+					</td>
+					<td>
+					
+						<div class="hacking" id="container_events">
+							
+							<div id="eventimg">
+								<img width="200px" height="150px"src="img/workshops/hacking.jpg">
+							</div>
+						
+							<div id="span" class="ani">
+								ETHICAL HACKING<br/>
+
+							</div>
+							
+						</div>	
+					</td>
+			</tr>		
+				
+								
+				</div>	
+			</div>		
+		</div>	
+       </table>
+		
+		
+		<script>
+					$(document).ready(function()
+					{		
+								$("#eventbox").mCustomScrollbar(
+								{
+								horizontalScroll:true,
+								advanced:
+									{
+								
+										updateOnContentResize: true
+									},
+								scrollButtons:
+									{
+									enable:true
+									}
+
+								});	
+								
+				
+				
+				
+								$(".android").click(function()
+									{
+										$("#box2").addClass("box3");
+										$("#box3").addClass("box4");
+										$("#bbox3").html('<div id="loader"><div><img src="img/loader.gif" height="80px" width="80px"></div>LOADING...</div>');
+										$("#bbox3").load("pages/workshops/android/index.html");
+					
+									});		
+								$(".linux").click(function()
+									{
+										$("#box2").addClass("box3");
+										$("#box3").addClass("box4");
+										$("#bbox3").html('<div id="loader"><div><img src="img/loader.gif" height="80px" width="80px"></div>LOADING...</div>');
+										$("#bbox3").load("pages/workshops/linux/index.html");
+					
+									});	
+								$(".matlab").click(function()
+									{
+										$("#box2").addClass("box3");
+										$("#box3").addClass("box4");
+										$("#bbox3").html('<div id="loader"><div><img src="img/loader.gif" height="80px" width="80px"></div>LOADING...</div>');
+										$("#bbox3").load("pages/workshops/matlab/index.html");
+					
+									});	
+								$(".hacking").click(function()
+									{
+										$("#box2").addClass("box3");
+										$("#box3").addClass("box4");
+										$("#bbox3").html('<div id="loader"><div><img src="img/loader.gif" height="80px" width="80px"></div>LOADING...</div>');
+										$("#bbox3").load("pages/workshops/hacking/index.html");
+					
+									});	
+								$(".autobotics").click(function()
+									{
+										$("#box2").addClass("box3");
+										$("#box3").addClass("box4");
+										$("#bbox3").html('<div id="loader"><div><img src="img/loader.gif" height="80px" width="80px"></div>LOADING...</div>');
+										$("#bbox3").load("pages/workshops/autobotics/index.html");
+					
+									});		
+					})(jQuery);
+				</script>
+	<!-- CUSTOM SCROLL SCRIPT ENDSSS -->
+</body>   

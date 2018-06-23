@@ -1,0 +1,83 @@
+
+	
+
+
+<script type="text/javascript">
+
+soundManager.setup({
+  // path to directory containing SM2 SWF
+  url: 'swf/'
+});
+
+threeSixtyPlayer.config.scaleFont = (navigator.userAgent.match(/msie/i)?false:true);
+threeSixtyPlayer.config.showHMSTime = true;
+
+// enable some spectrum stuffs
+
+threeSixtyPlayer.config.useWaveformData = true;
+threeSixtyPlayer.config.useEQData = true;
+
+// enable this in SM2 as well, as needed
+
+if (threeSixtyPlayer.config.useWaveformData) {
+  soundManager.flash9Options.useWaveformData = true;
+}
+if (threeSixtyPlayer.config.useEQData) {
+  soundManager.flash9Options.useEQData = true;
+}
+if (threeSixtyPlayer.config.usePeakData) {
+  soundManager.flash9Options.usePeakData = true;
+}
+
+if (threeSixtyPlayer.config.useWaveformData || threeSixtyPlayer.flash9Options.useEQData || threeSixtyPlayer.flash9Options.usePeakData) {
+  // even if HTML5 supports MP3, prefer flash so the visualization features can be used.
+  soundManager.preferFlash = true;
+}
+
+// favicon is expensive CPU-wise, but can be used.
+if (window.location.href.match(/hifi/i)) {
+  threeSixtyPlayer.config.useFavIcon = true;
+}
+
+if (window.location.href.match(/html5/i)) {
+  // for testing IE 9, etc.
+  soundManager.useHTML5Audio = true;
+}
+
+</script>
+<head>
+<body>
+ <div id="sponsercontainer">
+
+
+
+		<div class="title-2">XHAUST THEME SONG | PRAJWALAN XIV</div><hr/>
+			<div id="sponserbox">
+				
+			
+						<div class="ui360 ui360-vis">
+							<a id="play" href="mp3/prajwalan.mp3">Play</a>
+						</div>
+						
+				
+						
+			</div>	
+		<div id="downloadxhaust">
+			<a target="_blank" href="mp3/prajwalan.mp3">DOWNLOAD</a>
+		</div>	
+		<div id="boxofmp3">
+			Xhaust is the song which is meant for an Engineering student who has been completly exhausted by Practicals, Theory, Exams & Backlogs. He/She wants to do something extraordinary, something which he/she love's to do and Prajwalan'14 is the platform which will provide an opportunity  
+			and which will amplify his/her Talent.<br/><br/>
+			<li>Lyrics by-&nbsp;&nbsp;Saif Bhurani</li>
+			<li>Composed by-&nbsp;&nbsp;Akhilesh Joshi</li>
+			<li>Music by-&nbsp;&nbsp;Aritra and Akhilesh</li>
+			<li>Artists-&nbsp;&nbsp;Abhishek, Pranat, Kaustubh, Arpit, Shruti, Surbhi and Aishwarya</li>
+		</div>
+
+			
+</div>	
+       
+		
+		
+		
+</body>   
